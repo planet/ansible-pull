@@ -1,5 +1,6 @@
 #!/bin/bash
 
-echo "This is the test ansible app"
+touch /tmp/ansible-pulled.txt
+echo "Ansible was pulled successfully" >> /tmp/ansible-pulled.txt
 
 exit 0;
