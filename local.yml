@@ -13,3 +13,8 @@
       owner: "root"
       group: "root"
       mode: "0751"
+  - name: run script deployed
+    ansible.builtin.script:
+      cmd: /tmp/ansible_test_app/ansible_app.sh
+      args:
+        creates: /tmp/ansible-pulled.txt
