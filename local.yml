@@ -1,6 +1,5 @@
 ---
 - hosts: all
-
   tasks:
   - name: install example application
     copy: 
@@ -8,3 +7,9 @@
       dest: /tmp/
       owner: root
       group: root
+  - name: change permission of script
+    ansible.builtin.file:
+      path: /tmp/ansible_test_app/ansible_app.sh
+      owner: "root"
+      group: "root"
+      mode: "0751"
